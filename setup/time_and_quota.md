@@ -21,12 +21,64 @@ this cell stuck?"** This page answers both.
 | One full run of the lab notebook | **≈ 30 min = 1.7 %** of your weekly quota |
 | A 3-hour lab session with re-runs | ≈ 10 % of your weekly quota |
 
-You can run this notebook many times over in one week. Check what you have left in the
-notebook editor's session panel.
+You can run this notebook many times over in one week.
+
+### Reading the session panel
+
+The editor's top bar carries three little meters — **HDD**, **CPU**, **RAM**. Click them and
+the session panel opens on the right. This is the check to run when you wonder whether
+something is actually using the GPU, or how long you have been burning quota:
+
+[**Screenshot: the Kaggle session panel**](img/kaggle-quota.png) — opened from the HDD / CPU / RAM meters in the editor's top bar.
+
+Read it top to bottom:
+
+| Panel row | What it means here |
+| --- | --- |
+| **GPU T4 ×2 On** | The accelerator is actually attached. If this says *No accelerator*, stop — fix Settings before running anything, or you will run the whole notebook on CPU. |
+| **Session 3m**, *12 hours* | Time this session has been alive, against the 12 h cap. **This is what is spending your weekly quota** — it keeps counting while you read, and stops only when the session does. |
+| **Disk 346.1 MiB**, *Max 57.6 GiB* | `/kaggle/working` plus the caches. The ~30 GB model download lands here; watch it climb during the first model-loading cell. |
+| **RAM 536.5 MiB**, *Max 30 GiB* | Host RAM. Model loading is CPU- and RAM-heavy before the weights reach the cards. |
+| **GPU** ×2, *Max 15 GiB each* | One block **per card** — this is how you confirm both T4s are in play. The validated run peaks at 11,987 and 11,499 MiB. Two blocks at 0 % during a long cell means it is not on the GPU at all. |
+
+The screenshot above is a session that has just started: 3 minutes in, nothing loaded, both
+GPUs idle at 0 bytes. During the first model-loading cell you would see disk climb toward
+30 GB and then both GPU blocks fill to roughly 12 GiB each.
+
+**The panel shows this session, not your week.** For the weekly GPU hours you have left, open
+kaggle.com/settings and look under *Accelerators* — it is the only place the remaining
+quota is stated.
 
 The one habit worth having: **don't leave an idle GPU session open** while you write up your
 report. It burns quota for nothing. Stop the session, write, start it again — at the price
 of another model load (below).
+
+### Restarting the kernel vs. stopping the session
+
+Two different controls, easy to confuse, **very** different costs. The rule: the kernel is
+your Python process, the session is the whole machine under it.
+
+| | **Run → Restart & Clear Cell Outputs** | **Stop Session** (top bar / session panel) |
+| --- | --- | --- |
+| What restarts | The **kernel** — your Python process | The whole **machine** |
+| Variables, models in GPU memory | Gone | Gone |
+| The ~30 GB model cache in `/root/.cache` | **Kept** | **Gone** |
+| Files in `/kaggle/working` | Kept | Kept (they are version output) |
+| Kaggle Secrets | **Re-read** — this is how a newly added secret arrives | Re-read |
+| Cost to get back to where you were | ~8 min model load | ~8 min model load **+ the 30 GB download again** |
+| Quota meter | Keeps running | **Stops** |
+
+So:
+
+- **Restart the kernel** when the notebook state is confused but the machine is fine — a
+  leaked steering hook, a variable you want gone, a secret you added after the session
+  started. You lose the loaded models and reload them from the local cache.
+- **Stop the session** only when you are genuinely done for now, or you need to change a
+  setting that is fixed at session start (the accelerator, for instance). This is the one
+  that stops the quota meter — and the one that makes you re-download 30 GB next time.
+
+**Neither is a way to "start clean" cheaply.** Both cost you the ~8-minute model load, so
+during a lab prefer re-running the cells you actually need over reaching for either.
 
 ---
 

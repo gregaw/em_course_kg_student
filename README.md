@@ -1,5 +1,10 @@
 # Emergent Misalignment — labs
 
+
+> ⚠️ **Work in progress.** Timings, expected outputs, quota figures and the lab structure may
+> all change before the course runs — every number here is one measurement from one day, not a
+> promise. Check with your lecturer, and tell them when something doesn't match what you see.
+
 ## 📚 Based on the ARENA AI-safety curriculum
 
 These labs are a **Kaggle port of [ARENA 3.0, chapter 4.1 "Emergent
@@ -28,21 +33,6 @@ If you want the original, or want to go further than these two labs:
 ARENA is worth knowing about beyond this module: it is a free, self-servable curriculum
 covering transformer interpretability, RL and alignment science, and the chapter you are about
 to work through is one section of it.
-
----
-
-> # ⚠️ Work in progress
->
-> This material is still being developed. **Timings, expected outputs, quota figures and the
-> lab structure may all change before the course runs.** Every number here is a measurement
-> from one validated run on one day, not a promise — Kaggle's hardware, queues and base image
-> move, and so will these pages. Check with your lecturer for the current version, and tell
-> them when something here doesn't match what you see.
-
-Everything you need to run the two practical labs of this module on **Kaggle's free tier**.
-No GPU of your own, no cloud account, no credit card, no paid service. Every run is **free**;
-the resource you are spending is **time** — roughly half an hour of GPU per full run, out of
-the 30 hours per week your Kaggle account gets.
 
 ---
 
