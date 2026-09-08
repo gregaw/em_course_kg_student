@@ -1,7 +1,7 @@
 # Troubleshooting
 
 Symptom → cause → fix. If your problem is "a cell has been running for ages", check
-`time_and_quota.md` first — several cells are genuinely slow and are not hanging.
+[`time_and_quota.md`](time_and_quota.md) first — several cells are genuinely slow and are not hanging.
 
 ---
 
@@ -9,7 +9,7 @@ Symptom → cause → fix. If your problem is "a cell has been running for ages"
 
 | Symptom | Cause / fix |
 | --- | --- |
-| **Accelerator** or **Internet** greyed out in Settings | Account not phone-verified. `kaggle_setup.md` Step 0.1. Nothing else will work until this is done. |
+| **Accelerator** or **Internet** greyed out in Settings | Account not phone-verified. [`kaggle_setup.md`](kaggle_setup.md) Step 0.1. Nothing else will work until this is done. |
 | `CUDA out of memory` during model load | Accelerator is **GPU P100** (one card) instead of **GPU T4 x2**. One 16 GB card cannot hold both model copies. Change the setting and restart the session. |
 | Long "waiting for GPU" | Kaggle's GPU queue at peak times. Usually a few minutes. Nothing to fix. |
 | `pip` install fails / no network | Internet is off. Remember the menu shows the *action*: "Turn on internet" means it is currently **off**. |
@@ -29,7 +29,7 @@ Symptom → cause → fix. If your problem is "a cell has been running for ages"
 | --- | --- |
 | Generations are `!!!!` or empty strings | fp16 overflow on T4. Did not occur in validation, but if it does, the notebook can be rebuilt with bf16 (slower, emulated on T4) — tell your lecturer. |
 | A judge column stuck at exactly `0.50` | The local judge isn't emitting `<score>N</score>`; `0.50` is the neutral fallback the parser uses rather than losing the whole table. Usually a symptom of the fp16 problem above. An occasional 0.50 is normal; a whole column is not. |
-| `Expected all tensors to be on the same device` inside a `tests.test_*` call, even though your own cell ran fine | The upstream reference implementation uses the global `device` (`cuda:0`) while the test hands it the model copy on `cuda:1`. The bootstrap cell patches this for you. **If you are working from the raw upstream exercises notebook instead of the one shipped here, you have to apply the same `.to(model.device)` fix yourself.** See `../notebook/README.md`. |
+| `Expected all tensors to be on the same device` inside a `tests.test_*` call, even though your own cell ran fine | The upstream reference implementation uses the global `device` (`cuda:0`) while the test hands it the model copy on `cuda:1`. The bootstrap cell patches this for you. **If you are working from the raw upstream exercises notebook instead of the one shipped here, you have to apply the same `.to(model.device)` fix yourself.** See [`../notebook/README.md`](../notebook/README.md). |
 | `applymap` deprecation warning | Warning only, from pandas ≥ 2.1 inside `utils.plot_steering_heatmaps`. Ignore it. |
 | `pip` resolver warnings on install | Harmless — Kaggle's preinstalled packages disagreeing with each other, not with this notebook. |
 | Steering "does nothing" after you edited a hook cell | A leaked hook, or a hook registered twice. Restart the kernel and re-run from the section start; check that coefficient 0 gives the same output as the un-hooked model. |

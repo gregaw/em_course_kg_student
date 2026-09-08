@@ -1,8 +1,8 @@
 # The lab notebook
 
-`4.1_Emergent_Misalignment_kaggle_exercises.ipynb` is the notebook both labs run in. It is
+[`4.1_Emergent_Misalignment_kaggle_exercises.ipynb`](4.1_Emergent_Misalignment_kaggle_exercises.ipynb) is the notebook both labs run in. It is
 the **ARENA 3.0 chapter 4.1 "Emergent Misalignment" notebook, patched to fit Kaggle's two
-16 GB T4 GPUs.** Upload it to Kaggle as described in `../setup/kaggle_setup.md`.
+16 GB T4 GPUs.** Upload it to Kaggle as described in [`../setup/kaggle_setup.md`](../setup/kaggle_setup.md).
 
 > ⚠️ **Work in progress.** The notebook is validated, but the surrounding course material is
 > still settling. Timings and expected outputs may change between now and the lab.
@@ -56,9 +56,9 @@ Your lab sheet tells you which ones belong to which part, and what to do with th
 
 Validated end to end on the Kaggle free tier: **38 code cells, 0 errors, 29.3 minutes wall
 clock, peak GPU memory 11,987 and 11,499 MiB of the 15,360 available per card.** Per-phase
-timings are in `../setup/time_and_quota.md`; if a cell worries you, check there before
+timings are in [`../setup/time_and_quota.md`](../setup/time_and_quota.md); if a cell worries you, check there before
 assuming it has hung. If the notebook fails outright, the cause is almost certainly a row in
-`../setup/troubleshooting.md`.
+[`../setup/troubleshooting.md`](../setup/troubleshooting.md).
 
 ---
 
@@ -111,7 +111,7 @@ draw are sound; exact numbers will differ slightly from any published figure.
   coherence falls.
 - The **phase transition** in §4 lands at a specific, sharp training step.
 - Generated text is **coherent English**. `!!!!!` or empty strings means fp16 overflowed —
-  see `../setup/troubleshooting.md`.
+  see [`../setup/troubleshooting.md`](../setup/troubleshooting.md).
 
 ---
 

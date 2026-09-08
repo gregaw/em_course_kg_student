@@ -2,7 +2,7 @@
 
 **Time:** ~3 hours, of which **~25 minutes is GPU time** ·
 **Work in:** pairs · **Follows:** Lecture 3 ·
-**Runs in:** `../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`, sections
+**Runs in:** [`../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`](../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb), sections
 **3️⃣ Activation Steering** and **4️⃣ Phase Transitions**.
 
 > ⚠️ **Work in progress.** Timings and expected outputs are estimates from one validated

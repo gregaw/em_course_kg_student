@@ -31,8 +31,8 @@ anywhere in this course.
 
 ## Step 1 — Upload the notebook (~1 min)
 
-The notebook is `../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`. Read
-`../notebook/README.md` first — it explains what it is and how it differs from the
+The notebook is [`../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`](../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb). Read
+[`../notebook/README.md`](../notebook/README.md) first — it explains what it is and how it differs from the
 upstream ARENA original.
 
 1. Go to **kaggle.com/code** → **New Notebook**.
@@ -141,7 +141,7 @@ Hugging Face download and you just wait.
 - [ ] The notebook is imported and opens in the editor.
 - [ ] **Accelerator = GPU T4 x2** and **Internet = On** (neither greyed out).
 - [ ] `HF_TOKEN` exists as a Secret and is **attached to this notebook**.
-- [ ] You have read `time_and_quota.md` and know a full run is ~30 min.
+- [ ] You have read [`time_and_quota.md`](time_and_quota.md) and know a full run is ~30 min.
 
 If any box is unticked when the lab starts, tick it before running anything — see
-`troubleshooting.md`.
+[`troubleshooting.md`](troubleshooting.md).

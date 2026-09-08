@@ -48,20 +48,20 @@ the 30 hours per week your Kaggle account gets.
 
 ## Start here
 
-1. **`setup/kaggle_setup.md`** — accounts, tokens, notebook settings. **Do this days before
+1. **[`setup/kaggle_setup.md`](setup/kaggle_setup.md)** — accounts, tokens, notebook settings. **Do this days before
    Lab 1**: phone verification can take a while, and nothing works without it.
-2. **`setup/time_and_quota.md`** — how long each phase takes, which slow cells are slow on
+2. **[`setup/time_and_quota.md`](setup/time_and_quota.md)** — how long each phase takes, which slow cells are slow on
    purpose, and how much of your weekly quota a run costs.
-3. **`notebook/README.md`** — what the lab notebook is, and which twelve cells you fill in.
-4. **`labs/lab1_students.md`**, then **`labs/lab2_students.md`**.
-5. **`setup/troubleshooting.md`** — when something breaks. Read the row before asking.
+3. **[`notebook/README.md`](notebook/README.md)** — what the lab notebook is, and which twelve cells you fill in.
+4. **[`labs/lab1_students.md`](labs/lab1_students.md)**, then **[`labs/lab2_students.md`](labs/lab2_students.md)**.
+5. **[`setup/troubleshooting.md`](setup/troubleshooting.md)** — when something breaks. Read the row before asking.
 
 ---
 
 ## The two labs
 
 Both run in the same notebook:
-`notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`.
+[`notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`](notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb).
 
 | Lab | Notebook sections | What you do | Your time | GPU time |
 | --- | --- | --- | --- | --- |

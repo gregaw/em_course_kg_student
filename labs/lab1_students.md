@@ -2,7 +2,7 @@
 
 **Time:** ~2.5–3 hours, of which **~30 minutes is GPU time** ·
 **Work in:** pairs · **Follows:** Lectures 1 & 2 ·
-**Runs in:** `../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`, sections
+**Runs in:** [`../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb`](../notebook/4.1_Emergent_Misalignment_kaggle_exercises.ipynb), sections
 **1️⃣ Load & Test Model Organisms** and **2️⃣ Quantifying Misalignment**.
 
 > ⚠️ **Work in progress.** Timings and expected outputs are estimates from one validated
@@ -21,14 +21,14 @@ lab session of your own.
 
 ## 0. Before the lab (do this in advance — ~20 min)
 
-Work through `../setup/kaggle_setup.md` completely. By the start of the lab you must have:
+Work through [`../setup/kaggle_setup.md`](../setup/kaggle_setup.md) completely. By the start of the lab you must have:
 
 - [ ] A **phone-verified** Kaggle account. *(Not fixable in the lab room. Do it days ahead.)*
 - [ ] The notebook imported, with **Accelerator = GPU T4 x2** and **Internet = On**.
 - [ ] `HF_TOKEN` added as a Kaggle Secret and **attached to this notebook**.
-- [ ] Read `../notebook/README.md` — in particular which twelve cells are exercises and how
+- [ ] Read [`../notebook/README.md`](../notebook/README.md) — in particular which twelve cells are exercises and how
       they are stubbed.
-- [ ] Skimmed `../setup/time_and_quota.md` so you know which cells are slow on purpose.
+- [ ] Skimmed [`../setup/time_and_quota.md`](../setup/time_and_quota.md) so you know which cells are slow on purpose.
 
 Nothing here costs money, but a broken setup costs you the lab session. The habit is the one
 real teams have: get the cheap checks green before you start the expensive thing.
@@ -48,7 +48,7 @@ so it can be studied. Two copies are loaded, 4-bit quantised, one per T4.
    you do anything else.
 
    Watch for `Loading checkpoint shards`. The model is loaded **twice** (once per card), so
-   you will see that progress bar run twice — expected, not a hang. `../setup/time_and_quota.md`
+   you will see that progress bar run twice — expected, not a hang. [`../setup/time_and_quota.md`](../setup/time_and_quota.md)
    has the full per-phase table if any cell worries you.
 
 2. Run **`## Loading Model Organisms`** and **`## Understanding LoRA Adapters` /
